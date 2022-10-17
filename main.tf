@@ -9,5 +9,8 @@ terraform {
 
 provider "azurerm" {
   # Configuration options
+  use_msi = true
+  subscription_id = ""
+  tenant_id = ""
 
 }
