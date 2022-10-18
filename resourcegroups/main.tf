@@ -8,7 +8,9 @@ terraform {
 }
 
 provider "azurerm" {
-  # Configuration options
+}
 
-
+resource "azurerm_resource_group" "rg" {
+  location = "australiaeast"
+  name     = "TFResourceGroup"
 }

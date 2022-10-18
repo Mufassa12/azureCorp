@@ -1,0 +1,20 @@
+resources:
+  repositories:
+    - repository: azureCorp
+      type: github
+      endpoint: MyGitHubServiceConnection
+      name: Mufassa12/azureCorp
+      ref: main
+      trigger:
+        - main
+
+trigger:
+  - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  - checkout: self
+
+  - script: dir $(Build.SourcesDirectory)
